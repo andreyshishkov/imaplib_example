@@ -2,6 +2,9 @@ import imaplib
 import email
 from email.header import decode_header
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 IMAP_SERVER = os.environ.get('IMAP_SERVER')
