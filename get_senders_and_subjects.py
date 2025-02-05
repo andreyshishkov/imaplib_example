@@ -1,11 +1,12 @@
 import imaplib
 import email
 from email.header import decode_header
+import os
 
 
-IMAP_SERVER = 'imap.yandex.ru'
-EMAIL_ACCOUNT = 'shishkoffandrey@yandex.ru'
-PASSWORD = 'kaxizpnhbywhtbcs'
+IMAP_SERVER = os.environ.get('IMAP_SERVER')
+EMAIL_ACCOUNT = os.environ.get('EMAIL_ACCOUNT')
+PASSWORD = os.environ.get('PASSWORD')
 
 mail = imaplib.IMAP4_SSL(IMAP_SERVER)
 
